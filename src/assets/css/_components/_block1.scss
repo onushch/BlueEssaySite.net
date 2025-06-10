@@ -1,0 +1,107 @@
+.container-fluid.two {
+    padding: 0;
+}
+
+.container-fluid .block-one {
+    height: 630px;
+    background-color: #e6f7fe;
+    background-image: url(../img/img-cloud.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    animation: backgroundPan 20s linear infinite alternate;
+}
+
+@keyframes backgroundPan {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+.block-one .container {
+    padding-top: 140px;
+    display: flex;
+    flex-direction: row;
+}
+
+.block-one .text h2 {
+    width: 947px;
+    height: 106px;
+    font-size: 47px;
+    letter-spacing: -1px;
+    color: #03a9f4;
+    font-family: "Poppins-B";
+    background: linear-gradient(90deg, #03a9f4, #87ceeb, #03a9f4, #000000, #03a9f4);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+
+    animation: text-animation 20s linear infinite;
+}
+
+@keyframes text-animation {
+    0% {
+        background-position: 200% 0%;
+    }
+
+    100% {
+        background-position: -200% 0%;
+    }
+}
+
+.block-one .text {
+    display: flex;
+    flex-direction: column;
+}
+
+.block-one .text .line {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    width: 545px;
+    height: 3px;
+    background-color: #31353720;
+}
+
+.block-one .text .orange-line {
+    width: 50px;
+    height: 3px;
+    background-color: #f75d2d;
+}
+
+.block-one .text p {
+    width: 557px;
+    font-size: 20px;
+    line-height: 30px;
+    color: #656a70;
+    font-family: "Poppins-M";
+}
+
+.block-one .text button {
+    width: 220px;
+    border: 0;
+    height: 50px;
+    border-radius: 3px;
+    background-color: #f75e2d;
+    background-image: linear-gradient(90deg, #f75e2d, #ff8a50, #f75e2d);
+    background-size: 200% 100%;
+    background-position: 0% 0%;
+    font-family: "Poppins-M";
+    color: white;
+    cursor: pointer;
+    transition: background 0.4s ease;
+}
+
+.block-one .text button:hover {
+    background-position: 100% 0%;
+}
+
+
