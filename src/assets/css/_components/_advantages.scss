@@ -9,6 +9,7 @@
     background-position: center;
     background-size: 400% 100%;
     animation: blueBlockGradientShift 30s ease infinite;
+    overflow: hidden;
 }
 
 .advantages .bg-img {
@@ -21,14 +22,17 @@
     left: 0;
     object-fit: cover;
     pointer-events: none;
-
+    transform-origin: center center;
     animation: zoomInOut 10s ease-in-out infinite;
 }
 
 @keyframes zoomInOut {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: scale(1);
     }
+
     50% {
         transform: scale(1.05);
     }
@@ -105,7 +109,7 @@
     cursor: pointer;
 }
 
-.advantages  button {
+.advantages button {
     position: relative;
     z-index: 10;
     cursor: pointer;
@@ -128,6 +132,6 @@
     transition: background 0.4s ease;
 }
 
-.advantages  button:hover {
+.advantages button:hover {
     background-position: 100% 0%;
 }
