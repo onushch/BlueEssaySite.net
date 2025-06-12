@@ -1,0 +1,46 @@
+.welcome-block {
+    margin-top: 90px;
+    margin-bottom: 95px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.welcome-block img {
+    width: 515px;
+    background-color: #e5f7fd;
+    box-shadow: 5px 5px 3px #0086c3;
+}
+
+.welcome-block .content {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.welcome-block .text {
+    max-width: 555px;
+    height: 338px;
+}
+
+.welcome-block .text h4 {
+    margin-bottom: 28px;
+    font-size: 15px;
+    color: #0287c3;
+    font-weight: 400;
+    font-family: "Poppins-L";
+}
+
+.welcome-block .text h2 {
+    font-size: 35px;
+    color: #1e2021;
+    font-family: "Poppins-M";
+    margin-bottom: 28px;
+}
+
+.welcome-block .text p {
+    font-size: 14px;
+    line-height: 22px;
+    color: #51555a;
+    font-family: "Poppins-M";
+}
