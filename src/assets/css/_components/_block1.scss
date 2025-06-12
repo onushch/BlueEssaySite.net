@@ -31,7 +31,7 @@
     flex-direction: row;
 }
 
-.block-one .text h2 {
+.block-one .text-content h2 {
     width: 947px;
     height: 106px;
     font-size: 47px;
@@ -58,12 +58,12 @@
     }
 }
 
-.block-one .text {
+.block-one .text-content {
     display: flex;
     flex-direction: column;
 }
 
-.block-one .text .line {
+.block-one .text-content .line {
     margin-top: 25px;
     margin-bottom: 25px;
     width: 545px;
@@ -71,13 +71,13 @@
     background-color: #31353720;
 }
 
-.block-one .text .orange-line {
+.block-one .text-content .orange-line {
     width: 50px;
     height: 3px;
     background-color: #f75d2d;
 }
 
-.block-one .text p {
+.block-one .text-content p {
     width: 557px;
     font-size: 20px;
     line-height: 30px;
@@ -85,7 +85,7 @@
     font-family: "Poppins-M";
 }
 
-.block-one .text button {
+.block-one .text-content button {
     width: 220px;
     border: 0;
     height: 50px;
@@ -100,8 +100,146 @@
     transition: background 0.4s ease;
 }
 
-.block-one .text button:hover {
+.block-one .text-content button:hover {
     background-position: 100% 0%;
 }
 
+.block-one .girl-protruding-block {
+    position: absolute;
+    right: 420px;
+    bottom: 80px;
+    z-index: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    pointer-events: none;
+}
 
+
+.blue-block {
+    height: 135px;
+    max-width: 1200px;
+    filter: drop-shadow(0px 4px 15px rgba(202, 202, 202, 0.15));
+    background: linear-gradient(270deg, #03a9f3, #0288d1, #0056b3, #0288d1, #03a9f3);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+    margin-top: -50px;
+    position: relative;
+    top: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+
+    background-size: 400% 100%;
+    animation: blueBlockGradientShift 20s ease infinite;
+}
+
+@keyframes blueBlockGradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.blue-block-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-radius: 0.3125rem;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: end;
+}
+
+.blue-block-form fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3125rem;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.blue-block-form label {
+    color: white;
+    font-size: 0.875rem;
+    font-family: "Poppins-M", sans-serif;
+    white-space: nowrap;
+}
+
+.blue-block-form select {
+    width: 202px;
+    height: 50px;
+    border-radius: 3px;
+    background-color: #f6f9f9;
+    border: 1px solid #d8dadb;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: white;
+    font-family: "Poppins-M", sans-serif;
+    color: #333;
+}
+
+.blue-block-form .number-input-group {
+    width: 202px;
+    height: 50px;
+    border-radius: 3px;
+    background-color: #f6f9f9;
+    border: 1px solid #d8dadb;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    font-family: "Poppins-M", sans-serif;
+}
+
+.blue-block-form .number-input-group button {
+    background: none;
+    border: none;
+    padding: 0.3125rem 0.625rem;
+    font-size: 1.125rem;
+    cursor: pointer;
+    color: #333;
+    transition: background-color 0.2s ease;
+}
+
+.blue-block-form .number-input-group button:hover {
+    background-color: #eee;
+}
+
+.blue-block-form .number-input-group input[type="number"] {
+    width: 3.125rem;
+    text-align: center;
+    border: none;
+    font-size: 1rem;
+    background-color: transparent;
+    color: #333;
+    padding: 0;
+}
+
+.blue-block-form .continue-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins-M';
+    width: 201px;
+    height: 50px;
+    border-radius: 3px;
+    background-color: #006391;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.blue-block-form .continue-button:hover {
+    background-image: linear-gradient(90deg, rgba(1, 134, 195, 0.6), rgba(1, 134, 195, 0.9), rgba(1, 134, 195, 0.6));
+}
