@@ -1,0 +1,127 @@
+.testi {
+    height: 485px;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.testi h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0px 10px 2px 5px #00aaff;
+    background-color: #fff;
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.slides {
+    display: flex;
+    width: 300%;
+    transition: transform 0.6s ease-in-out;
+}
+
+.slide {
+    flex: 0 0 100%;
+    text-align: center;
+    padding: 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.slide p {
+    padding: 10px;
+    font-size: 14px;
+    line-height: 22px;
+    color: #51555a;
+    font-weight: 300;
+    font-family: "Poppins-L";
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.slide h3 {
+    color: #00aaff;
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.arrows label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 32px;
+    color: #00aaff;
+    cursor: pointer;
+    user-select: none;
+    z-index: 2;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.7);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+#slide1:checked~.slides {
+    transform: translateX(0%);
+}
+
+#slide2:checked~.slides {
+    transform: translateX(-100%);
+}
+
+#slide3:checked~.slides {
+    transform: translateX(-200%);
+}
+
+.dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 3;
+
+}
+
+.dots label {
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #bbb;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+#slide1:checked~.dots .dot1,
+#slide2:checked~.dots .dot2,
+#slide3:checked~.dots .dot3 {
+    background-color: #00aaff;
+
+}
