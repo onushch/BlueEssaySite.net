@@ -1,5 +1,4 @@
 .testi {
-    height: 485px;
     padding: 60px 0;
     text-align: center;
 }
@@ -13,15 +12,23 @@
 .carousel {
     position: relative;
     width: 100%;
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
     overflow: hidden;
     border-radius: 8px;
-    box-shadow: 0px 10px 2px 5px #00aaff;
+    border: 3px dashed #f75d2ecc;
     background-color: #fff;
     min-height: 350px;
     display: flex;
     align-items: center;
+}
+
+.carousel .bgg {
+    width: 1000px;
+    position: absolute;
+    top: 10%;
+    filter: brightness(30%);
+    animation: zoomInOut 10s ease-in-out infinite;
 }
 
 input[type="radio"] {
