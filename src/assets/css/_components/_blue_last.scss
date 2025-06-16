@@ -188,3 +188,154 @@
         }
     }
 }
+
+@media (min-width: 481px) and (max-width: 1024px) {
+    .blue_last {
+        height: auto;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .main-container {
+        padding-bottom: 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .logo-img img {
+        height: 70px;
+        width: auto;
+    }
+
+    .nav-links ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .nav-links ul li {
+        font-size: 14px;
+    }
+
+    .blue_last .sections {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        text-align: left;
+    }
+
+    .blue_last .sections p {
+        max-width: 45%;
+        font-size: 13px;
+        margin-bottom: 15px;
+    }
+
+    .copyright {
+        padding-top: 30px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .copyright .cr {
+        width: 100%; 
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .copyright .phone,
+    .copyright .email {
+        flex-direction: row; 
+        gap: 8px;
+    }
+
+    .copyright .phone .text strong,
+    .copyright .email .text strong {
+        font-size: 15px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .blue_last {
+        height: auto;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .main-container {
+        padding-bottom: 15px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .logo-img img {
+        height: 60px;
+        width: auto;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .nav-links ul li {
+        font-size: 13px;
+        text-align: center;
+    }
+
+    .blue_last .sections {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .blue_last .sections p {
+        max-width: 90%;
+        font-size: 12px;
+        line-height: 1.5;
+        margin-bottom: 0;
+    }
+
+    .copyright {
+        padding-top: 20px;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .copyright .cr {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .copyright .social {
+        justify-content: center;
+    }
+
+    .copyright .phone,
+    .copyright .email {
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+    }
+
+    .copyright .phone .text h4,
+    .copyright .email .text h4 {
+        font-size: 12px;
+        line-height: 1.3;
+    }
+
+    .copyright .phone .text strong,
+    .copyright .email .text strong {
+        font-size: 14px;
+        line-height: 1.3;
+    }
+}

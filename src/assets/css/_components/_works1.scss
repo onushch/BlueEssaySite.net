@@ -1,7 +1,10 @@
 .works {
-    height: 540px;
-    padding-top: 80px;
+    height: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .works .text {
@@ -9,49 +12,63 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    text-align: center;
+    padding: 0 15px;
 }
 
 .works .text h4 {
-    margin-bottom: 28px;
-    font-size: 15px;
+    margin-bottom: 20px;
+    font-size: 14px;
     color: #0287c3;
     font-weight: 400;
     font-family: "Poppins-L";
 }
 
-.works .bord-work .step {
-    width: 196px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-.works .bord-work .step img {
-    height: 65px;
-    width: 65px;
+.works .text h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
 }
 
 .works .bord-work {
-    margin-top: 65px;
+    margin-top: 40px;
     display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-    align-items: start;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+}
+
+.works .bord-work .step {
+    width: 90%;
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.works .bord-work .step img {
+    height: 60px;
+    width: 60px;
+    margin-bottom: 10px;
 }
 
 .works .bord-work h3 {
-    font-size: 17px;
+    font-size: 16px;
     text-transform: uppercase;
     color: #323538;
     font-weight: 600;
     font-family: "Poppins-M";
     text-align: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 
 .works .bord-work p {
     font-size: 13px;
-    line-height: 20px;
+    line-height: 1.5;
     color: #51555a;
     font-weight: 400;
     font-family: "Poppins-L";
@@ -59,6 +76,114 @@
 }
 
 .works .bord-work .single {
-   position: relative;
-   top: 30px;
+   display: none;
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .works {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .works .text h2 {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+
+    .works .bord-work {
+        flex-flow: wrap;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .works .bord-work .step {
+        width: 45%;
+        max-width: none;
+        padding: 20px;
+    }
+
+    .works .bord-work .step img {
+        height: 65px;
+        width: 65px;
+        margin-bottom: 15px;
+    }
+
+    .works .bord-work h3 {
+        font-size: 17px;
+        margin-top: 15px;
+        margin-bottom: 8px;
+    }
+
+    .works .bord-work p {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    .works .bord-work .single {
+        display: none;
+    }
+}
+
+@media (min-width: 1025px) {
+    .works {
+        height: 540px;
+        padding-top: 80px;
+        padding-bottom: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .works .text h4 {
+        margin-bottom: 28px;
+        font-size: 15px;
+    }
+
+    .works .text h2 {
+        font-size: 33px;
+        margin-bottom: 65px;
+    }
+
+    .works .bord-work {
+        margin-top: 65px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        align-items: start;
+        gap: 0;
+    }
+
+    .works .bord-work .step {
+        width: 196px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 0;
+    }
+
+    .works .bord-work .step img {
+        height: 65px;
+        width: 65px;
+        margin-bottom: 0;
+    }
+
+    .works .bord-work h3 {
+        font-size: 17px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .works .bord-work p {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    .works .bord-work .single {
+       position: relative;
+       top: 30px;
+       display: block;
+    }
 }

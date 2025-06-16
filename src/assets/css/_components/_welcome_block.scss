@@ -5,22 +5,30 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
 .welcome-block img {
     width: 515px;
+    height: auto;
     background-color: #e5f7fd;
     box-shadow: 5px 5px 3px #0086c3;
+    flex-shrink: 0;
+    max-width: 50%;
+    box-sizing: border-box;
 }
 
 .welcome-block .content {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .welcome-block .text {
     max-width: 555px;
-    height: 338px;
+    height: auto;
+    text-align: left;
 }
 
 .welcome-block .text h4 {
@@ -36,6 +44,7 @@
     color: #1e2021;
     font-family: "Poppins-M";
     margin-bottom: 28px;
+    word-break: break-word;
 }
 
 .welcome-block .text p {
@@ -43,4 +52,38 @@
     line-height: 22px;
     color: #51555a;
     font-family: "Poppins-M";
+    word-break: break-word;
+}
+
+
+
+@media (max-width: 768px) {
+    .welcome-block {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    .welcome-block img {
+        max-width: 85%;
+        margin-bottom: 20px;
+    }
+    .welcome-block .content {
+        width: 95%;
+    }
+    .welcome-block .text h2 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+    .welcome-block .text p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome-block img {
+        max-width: 100%;
+    }
+    .welcome-block .text h2 {
+        font-size: 20px;
+    }
 }

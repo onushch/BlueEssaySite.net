@@ -13,16 +13,11 @@
     padding: 0;
     position: relative;
     animation: backgroundPan 20s linear infinite alternate;
-}
-
-@keyframes backgroundPan {
-    0% {
-        background-position: 0% 0%;
-    }
-
-    100% {
-        background-position: 100% 100%;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    box-sizing: border-box;
 }
 
 .block-one .container {
@@ -31,11 +26,22 @@
     flex-direction: row;
     overflow-x: hidden;
     position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box; 
+}
+
+.block-one .text-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 60%;
+    flex-grow: 1;
 }
 
 .block-one .text-content h2 {
-    width: 947px;
-    height: 106px;
     font-size: 47px;
     letter-spacing: -1px;
     color: #03a9f4;
@@ -46,23 +52,7 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
-
     animation: text-animation 20s linear infinite;
-}
-
-@keyframes text-animation {
-    0% {
-        background-position: 200% 0%;
-    }
-
-    100% {
-        background-position: -200% 0%;
-    }
-}
-
-.block-one .text-content {
-    display: flex;
-    flex-direction: column;
 }
 
 .block-one .text-content .line {
@@ -80,7 +70,6 @@
 }
 
 .block-one .text-content p {
-    width: 557px;
     font-size: 20px;
     line-height: 30px;
     color: #656a70;
@@ -102,10 +91,6 @@
     transition: background 0.4s ease;
 }
 
-.block-one .text-content button:hover {
-    background-position: 100% 0%;
-}
-
 .girl-protruding-block {
     position: absolute;
     right: 3vw;
@@ -115,26 +100,13 @@
     align-items: flex-end;
     justify-content: center;
     pointer-events: none;
-    width: fit-content;
-    height: fit-content;
-    transform: none;
-}
 
+}
 
 .girl-protruding-block img {
-    transform-origin: center center;
-    animation: scalePulse 8s ease-in-out infinite;
+    max-width: 100%;
+    height: auto;
 }
-
-@keyframes scalePulse {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.03);
-    }
-}
-
 
 .blue-block {
     height: 135px;
@@ -151,23 +123,10 @@
     margin-left: auto;
     margin-right: auto;
     flex-wrap: wrap;
-
     background-size: 400% 100%;
     animation: blueBlockGradientShift 20s ease infinite;
-}
-
-@keyframes blueBlockGradientShift {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
+    padding: 20px;
+    border-radius: 8px;
 }
 
 .blue-block-form {
@@ -177,89 +136,228 @@
     border-radius: 0.3125rem;
     width: 100%;
     box-sizing: border-box;
-    align-items: end;
+    align-items: flex-end;
+    flex-wrap: wrap; 
+    gap: 20px;
 }
 
 .blue-block-form fieldset {
     display: flex;
     flex-direction: column;
-    gap: 0.3125rem;
     border: none;
     padding: 0;
     margin: 0;
 }
 
-.blue-block-form label {
+.blue-block-form fieldset label {
+    font-size: 13px;
     color: white;
-    font-size: 0.875rem;
-    font-family: "Poppins-M", sans-serif;
-    white-space: nowrap;
+    font-family: "Poppins-M";
+    margin-bottom: 5px;
 }
 
-.blue-block-form select {
-    width: 202px;
-    height: 50px;
+.blue-block-form fieldset input[type="text"],
+.blue-block-form fieldset select,
+.blue-block-form .number-input-group {
+    height: 40px;
     border-radius: 3px;
-    background-color: #f6f9f9;
-    border: 1px solid #d8dadb;
-    font-size: 1rem;
-    cursor: pointer;
-    background-color: white;
-    font-family: "Poppins-M", sans-serif;
+    border: none;
+    padding: 0 10px;
+    font-size: 14px;
     color: #333;
 }
 
 .blue-block-form .number-input-group {
-    width: 202px;
-    height: 50px;
-    border-radius: 3px;
-    background-color: #f6f9f9;
-    border: 1px solid #d8dadb;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
     background-color: white;
-    font-family: "Poppins-M", sans-serif;
+    border-radius: 3px;
+    overflow: hidden;
 }
 
 .blue-block-form .number-input-group button {
-    background: none;
+    width: 40px;
+    height: 40px;
+    background-color: #f0f0f0;
     border: none;
-    padding: 0.3125rem 0.625rem;
-    font-size: 1.125rem;
+    font-size: 20px;
     cursor: pointer;
     color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: background-color 0.2s ease;
 }
 
 .blue-block-form .number-input-group button:hover {
-    background-color: #eee;
+    background-color: #e0e0e0;
 }
 
-.blue-block-form .number-input-group input[type="number"] {
-    width: 3.125rem;
-    text-align: center;
+.blue-block-form .number-input-group input {
+    flex-grow: 1;
     border: none;
-    font-size: 1rem;
-    background-color: transparent;
+    padding: 0 10px;
+    height: 40px;
+    text-align: center;
+    font-size: 14px;
     color: #333;
-    padding: 0;
 }
 
 .blue-block-form .continue-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Poppins-M';
-    width: 201px;
-    height: 50px;
-    border-radius: 3px;
-    background-color: #006391;
+    height: 40px;
+    background-color: #f75e2d;
+    background-image: linear-gradient(90deg, #f75e2d, #ff8a50, #f75e2d);
+    background-size: 200% 100%;
+    background-position: 0% 0%;
+    font-family: "Poppins-M";
     color: white;
+    font-size: 14px;
     border: none;
+    border-radius: 3px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background 0.4s ease;
+
 }
 
 .blue-block-form .continue-button:hover {
-    background-image: linear-gradient(90deg, rgba(1, 134, 195, 0.6), rgba(1, 134, 195, 0.9), rgba(1, 134, 195, 0.6));
+    background-position: 100% 0%;
+}
+
+
+
+@media (max-width: 1024px) {
+    .container-fluid .block-one {
+        height: auto;
+        padding-bottom: 80px;
+    }
+    .block-one .container {
+        padding-top: 80px; 
+        flex-direction: column;
+        align-items: center;
+    }
+    .block-one .text-content {
+        max-width: 90%;
+        text-align: center;
+        align-items: center;
+    }
+    .block-one .text-content h2 {
+        font-size: 38px;
+        word-break: break-word;
+        height: auto;
+    }
+    .block-one .text-content .line {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .block-one .text-content p {
+        font-size: 18px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .girl-protruding-block {
+        position: static;
+        margin-top: 40px; 
+        width: 100%;
+        max-width: 400px; 
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        pointer-events: auto;
+    }
+    .girl-protruding-block img {
+        width: 100%;
+        height: auto;
+    }
+    .blue-block {
+        position: static; 
+        margin-top: 40px; 
+        max-width: 90%; 
+        height: auto; 
+        flex-direction: column;
+        padding: 15px; 
+    }
+    .blue-block-form {
+        flex-direction: column; 
+        align-items: center;
+        gap: 15px;
+    }
+    .blue-block-form fieldset {
+        width: 100%;
+        max-width: 300px; 
+        margin-bottom: 0; 
+    }
+    .blue-block-form select,
+    .blue-block-form .number-input-group,
+    .blue-block-form .continue-button {
+        width: 100%; 
+    }
+    .blue-block-form .continue-button {
+        margin-top: 15px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .block-one .container {
+        padding-top: 40px;
+    }
+    .block-one .text-content h2 {
+        font-size: 30px;
+    }
+    .block-one .text-content p {
+        font-size: 16px;
+    }
+    .block-one .text-content button {
+        width: 180px;
+        height: 45px;
+        font-size: 13px;
+    }
+    .girl-protruding-block img {
+        max-width: 80%;
+    }
+    .blue-block {
+        margin-top: 25px;
+        max-width: 95%;
+        padding: 10px;
+    }
+    .blue-block-form fieldset {
+        max-width: 280px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .block-one .text-content h2 {
+        font-size: 24px;
+        line-height: 1.3;
+    }
+    .block-one .text-content p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    .block-one .text-content .line {
+        width: 60%;
+    }
+    .block-one .text-content button {
+        width: 160px;
+        height: 40px;
+        font-size: 12px;
+    }
+    .girl-protruding-block img {
+        max-width: 90%;
+    }
+    .blue-block-form fieldset {
+        max-width: 250px;
+    }
+    .blue-block-form fieldset label {
+        font-size: 12px;
+    }
+    .blue-block-form fieldset input,
+    .blue-block-form fieldset select,
+    .blue-block-form .continue-button {
+        height: 35px;
+        font-size: 13px;
+    }
 }

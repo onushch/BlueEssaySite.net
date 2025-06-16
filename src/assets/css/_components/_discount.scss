@@ -1,8 +1,8 @@
+
 @keyframes gradientMove {
     0% {
         background-position: 0% 50%;
     }
-
     100% {
         background-position: 100% 50%;
     }
@@ -12,13 +12,29 @@
     0% {
         transform: translateX(-20px);
     }
-
     50% {
         transform: translateX(20px);
     }
-
     100% {
         transform: translateX(-20px);
+    }
+}
+
+@keyframes floatBalloon {
+    0% {
+        transform: translateY(0) rotate(-2deg);
+    }
+    25% {
+        transform: translateY(10%) rotate(2deg);
+    }
+    50% {
+        transform: translateY(0%) rotate(-2deg);
+    }
+    75% {
+        transform: translateY(20%) rotate(2deg);
+    }
+    100% {
+        transform: translateY(0) rotate(-2deg);
     }
 }
 
@@ -116,7 +132,6 @@
     border-right: 1px solid #e1e1e7;
 }
 
-
 .discount .white-block .w-cont {
     position: relative;
     color: orangered;
@@ -127,7 +142,7 @@
 
 .discount .white-block .w-cont .item:hover {
     background-color: rgba(255, 68, 0, 0.712);
-    color:#ffffff;
+    color: #ffffff;
 }
 
 .discount .white-block .blue-bg {
@@ -140,7 +155,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .discount .blue-bg .cont {
@@ -152,40 +166,21 @@
     height: 450px;
     border-radius: 20px;
     border: 3px dashed rgba(0, 0, 255, 0.134);
-    transition-duration:  0.4s;
+    transition-duration: 0.4s;
 }
 
 .discount .blue-bg .cont:hover {
-    background-color:black;
+    background-color: black;
     cursor: pointer;
-    
-}
-
-@keyframes floatBalloon {
-  0% {
-    transform: translateY(0) rotate(-2deg);
-  }
-  25% {
-    transform: translateY(10%) rotate(2deg);
-  }
-  50% {
-    transform: translateY(0%) rotate(-2deg);
-  }
-  75% {
-    transform: translateY(20%) rotate(2deg);
-  }
-  100% {
-    transform: translateY(0) rotate(-2deg);
-  }
 }
 
 .discount .blue-bg .baloon {
-  position: absolute;
-  width: 130px;
-  height: 180px;
-  top: -30%;
-  right: -4%;
-  animation: floatBalloon 10s ease-in-out infinite;
+    position: absolute;
+    width: 130px;
+    height: 180px;
+    top: -30%;
+    right: -4%;
+    animation: floatBalloon 10s ease-in-out infinite;
 }
 
 .blue-bg .cont .d-blue {
@@ -216,7 +211,6 @@
     font-family: "Open Sans";
 }
 
-
 .blue-bg .cont .d-blue h4 {
     font-size: 24px;
     letter-spacing: 0px;
@@ -226,7 +220,6 @@
     font-family: "Poppins-M";
     text-align: left;
     width: auto;
-
 }
 
 .blue-bg .cont .d-blue h2 {
@@ -252,4 +245,113 @@
     top: 30%;
     right: 4%;
     filter: drop-shadow(-1px 5px 1.2px rgba(0, 0, 0, 0.291));
+}
+
+@media (max-width: 1024px) {
+    .discount {
+        padding-top: 30px;
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .discount .text {
+        width: 95%;
+    }
+
+    .discount h2 {
+        font-size: 24px;
+        padding-bottom: 10px;
+        width: auto;
+    }
+
+    .discount h3 {
+        width: 95%;
+        font-size: 14px;
+        line-height: 1.4;
+        margin-bottom: 25px;
+    }
+
+    .discount .bg-img {
+        height: 200px;
+    }
+
+    .discount .white-block {
+        height: auto;
+        width: 95%;
+        flex-direction: column;
+        margin-bottom: 25px;
+    }
+
+    .discount .white-block .w-cont {
+        grid-template-columns: 1fr;
+        height: auto;
+        width: 100%;
+    }
+
+    .discount .white-block .w-cont .item {
+        width: 100%;
+        font-size: 24px;
+        line-height: 1.1;
+        padding: 15px;
+        border-bottom: 1px solid #e1e1e7;
+        border-right: none;
+    }
+    .discount .white-block .w-cont .item:last-child {
+        border-bottom: none;
+    }
+
+    .discount .white-block .w-cont .item p {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
+    .discount .white-block .blue-bg {
+        width: 100%;
+        height: auto;
+        margin-top: 0;
+        padding: 20px 0;
+    }
+
+    .discount .blue-bg .cont {
+        width: 95%;
+        height: auto;
+        padding: 15px;
+    }
+
+    .discount .blue-bg .cont h3 {
+        font-size: 18px;
+        line-height: 1.2;
+        margin: 10px 0;
+    }
+
+    .discount .blue-bg .cont .d-blue {
+        width: 95%;
+        height: auto;
+        padding: 10px 15px;
+    }
+
+    .blue-bg .cont .d-blue h4 {
+        font-size: 18px;
+        line-height: 1.1;
+    }
+
+    .blue-bg .cont .d-blue h2 {
+        font-size: 40px;
+        line-height: 1;
+        height: auto;
+    }
+
+    .discount .blue-bg .baloon {
+        width: 60px;
+        height: 80px;
+        top: -8%;
+        right: 2%;
+    }
+
+    .blue-bg .cont .sciss,
+    .blue-bg .cont .stars {
+        display: none;
+    }
 }
