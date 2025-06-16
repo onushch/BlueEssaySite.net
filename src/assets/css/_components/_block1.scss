@@ -63,7 +63,19 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
-    animation: text-animation 20s linear infinite;
+    animation: text-animation 10s linear infinite;
+}
+
+@keyframes text-animation {
+    0% {
+        background-position: 0% 100%;
+    }
+    50% {
+        background-position: 100% 0%;
+    }
+    100% {
+        background-position: 0% 100%;
+    }
 }
 
 .block-one .text-content .line {
